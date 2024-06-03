@@ -259,10 +259,11 @@ const togglePlay = () => {
       {/* New AI Section */}
       <section className="mt-12 text-white">
         <h2 className="text-3xl font-bold mb-4 text-shadow-default">Empowering with AI</h2>
-        <p className="text-lg mb-8 text-shadow-default"> {/* Apply text shadow to paragraph */}
+        <p className="text-lg mb-8 text-shadow-default">
           Leveraging the power of Google&apos;s advanced language models to create intelligent and personalized user experiences.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {/* Two columns on medium and larger screens */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Two columns on medium and larger screens */}
           {/* Google Gemini Advanced Card */}
           <div className="bg-white/10 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold mb-2 text-shadow-default text-white-500">Google Gemini Advanced</h3>
@@ -274,7 +275,6 @@ const togglePlay = () => {
               <li>Fine-grained control and customization</li>
             </ul>
           </div>
-
           {/* Google Gemma LLM Card */}
           <div className="bg-white/10 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold mb-2 text-shadow-default text-white-500">Google Gemma LLM</h3>
@@ -287,30 +287,7 @@ const togglePlay = () => {
           </div>
         </div>
       </section>
-      
-      {/* Music Player Section */}
-      <section className="mt-16 text-white relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 to-pink-900 opacity-50 rounded-lg"></div>
-        <div className="relative z-10 p-8 rounded-lg flex flex-col items-center">
-          <h2 className="text-3xl font-bold mb-4 text-shadow-default">
-            Rizki & Dita Heart's at One
-          </h2>
-          <div 
-            className={`w-64 h-64 rounded-full bg-cover bg-center shadow-lg mb-4 cursor-pointer transition-transform duration-300 ${isPlaying ? 'scale-110' : ''}`}
-            style={{ backgroundImage: "url('/hearts-at-one.jpeg')" }} 
-            onClick={togglePlay}
-          >
-            {/* Play/Pause Icon (You can use an SVG or image here) */}
-            {!isPlaying && (
-              <svg className="w-20 h-20 text-white mx-auto mt-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            )}
-            {isPlaying && (
-              <svg className="w-20 h-20 text-white mx-auto mt-20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            )}
-          </div>
-          <audio ref={audioRef} src="https://rizkidita-wedding.online/backsound.opus" />
-        </div>
-      </section>
+
 
       {/* Suno AI Section - Updated Style */}
       <section className="mt-16 text-white relative"> 
