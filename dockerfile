@@ -5,7 +5,10 @@ WORKDIR /app
 
 # 1. Cache Dependencies
 COPY package.json package-lock.json ./
-RUN --mount=type=cache,target=/app/node_modules npm ci --omit=dev
+RUN --mount=type=cache,target=/app/node_modules npm ci 
+
+# 2. Install Next.js as a Development Dependency
+RUN npm install next
 
 COPY . .
 RUN npm run build
